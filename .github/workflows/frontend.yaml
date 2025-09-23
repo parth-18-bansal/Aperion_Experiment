@@ -27,7 +27,9 @@ jobs:
           version: 9
 
       - name: Install dependencies
-        run: pnpm install
+        run: |
+          cd frontend/game-types/crash
+          pnpm install
 
   #  🔹 Choose environment (dev, test, prod, demo)
   #     - name: Set Environment Variables
