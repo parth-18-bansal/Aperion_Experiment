@@ -72,7 +72,7 @@ jobs:
 
       - name: make aviation directory
         run: |
-          cd frontend\game-types\crash\dist\crash-game-engine\browser
+          cd frontend/game-types/crash/dist/crash-game-engine/browser
           mkdir aviation
 
       - name: copy the build from games to games-type
