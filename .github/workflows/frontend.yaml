@@ -83,7 +83,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
             name: final-artifact
-            path: frontend/games-types/crash/dist/crash-game-engine
+            path: frontend/game-types/crash/dist/crash-game-engine
 
       
 
