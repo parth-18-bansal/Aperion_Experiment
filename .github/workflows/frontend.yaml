@@ -77,7 +77,7 @@ jobs:
 
       - name: copy the build from games to games-type
         run: |
-          cp frontend/games/crash/Aviation/dist frontend/game-types/crash/dist/crash-game-engine/browser/aviation
+          cp -r frontend/games/crash/Aviation/dist frontend/game-types/crash/dist/crash-game-engine/browser/aviation
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
