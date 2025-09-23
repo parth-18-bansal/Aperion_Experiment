@@ -56,7 +56,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-            name: my-artifact
+            name: game-type-artifact
             path: frontend/game-types/crash/dist/
 
       - name: Build games
@@ -67,7 +67,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-            name: my-artifact
+            name: games-build-artifact
             path: frontend/games/crash/Aviation/dist
 
       - name: copy the games build to games-type
@@ -79,7 +79,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-            name: my-artifact
+            name: final-artifact
             path: frontend/games-types/crash/dist/crash-game-engine
 
       
