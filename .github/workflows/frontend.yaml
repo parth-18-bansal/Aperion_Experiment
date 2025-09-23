@@ -59,10 +59,30 @@ jobs:
             name: my-artifact
             path: frontend/game-types/crash/dist/
 
-      - name: Build game-engine
+      - name: Build games
         run: |
-          cd games/frontend/games
+          cd frontend/games/crash
           pnpm run build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: my-artifact
+            path: frontend/games/crash/Avitation/dist
+
+      - name: copy the games build to games-type
+        run: |
+          cd frontend/game-types/crash/dist/crash-game-engine/browser
+          mkdir aviation
+          cp frontend/games/crash/dist frontend/game-types/crash/dist/crash-game-engine/browser
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: my-artifact
+            path: frontend/games-types/crash/dist/crash-game-engine
+
+      
 
       # - name: Configure AWS credentials
       #   uses: aws-actions/configure-aws-credentials@v4
