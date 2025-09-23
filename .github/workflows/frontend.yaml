@@ -70,10 +70,14 @@ jobs:
             name: games-build-artifact
             path: frontend/games/crash/Aviation/dist
 
-      - name: copy the games build to games-type
+      - name: make aviation directory
         run: |
           cd frontend/game-types/crash/dist/crash-game-engine/browser
           mkdir aviation
+          cp frontend/games/crash/Aviation/dist frontend/game-types/crash/dist/crash-game-engine/browser
+
+      - name: copy the build from games to games-type
+        run: |
           cp frontend/games/crash/Aviation/dist frontend/game-types/crash/dist/crash-game-engine/browser
 
       - name: Upload artifact
