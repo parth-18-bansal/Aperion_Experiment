@@ -61,14 +61,14 @@ jobs:
 
       - name: Build games
         run: |
-          cd frontend/games/crash/Avitation
+          cd frontend/games/crash/Aviation
           pnpm run build
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
             name: my-artifact
-            path: frontend/games/crash/Avitation/dist
+            path: frontend/games/crash/Aviation/dist
 
       - name: copy the games build to games-type
         run: |
