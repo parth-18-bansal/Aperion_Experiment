@@ -1,0 +1,31 @@
+{
+  "server_local": {
+    "info":"local server | localhost",
+    "wsUrl": "wss://storage.velorazed.com/Aviation",
+    "httpUrl": "https://storage.velorazed.com/api/crash/Aviation"
+  },
+  "server_dev": {
+    "info":"dev server | cdn",
+    "wsUrl": "wss://storage.velorazed.com/Aviation",
+    "httpUrl": "https://storage.velorazed.com/api/crash/Aviation"
+  },
+  "server_stage": {
+    "info":"stage server | cdn & farklı sayfadan yönlendirme",
+    "wsUrl": "wss://asg-test.velorazed.com/Aviation",
+    "httpUrl": "https://asg-test.velorazed.com/api/crash/Aviation"
+  },
+  "server_demo": {
+    "info":"demo server",
+    "wsUrl": "wss://demo.velorazed.com/Aviation",
+    "httpUrl": "https://demo.velorazed.com/api/crash/Aviation"
+  },
+  "server_prod": {
+    "info":"prod server",
+    "wsUrl": "wss://d2j9pg7ato0knr.cloudfront.net/Aviation",
+    "httpUrl": "https://d2j9pg7ato0knr.cloudfront.net/api/crash/Aviation"
+  },
+  "assets": {
+    "styles": ["./css/theme.css"],
+    "scripts": ["./build.min.wlka1x1x5.iife.js"]
+  }
+}

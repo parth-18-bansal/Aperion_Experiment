@@ -1,0 +1,241 @@
+{
+  "splash": {
+    "welcome": "Aperion",
+    "initializing": "Aviation",
+    "loading": "Yükleniyor"
+  },
+  "navbar": {
+    "game-name": "Oyun Adı",
+    "navbar-content": "Gezinme Çubuğu"
+  },
+  "jackpot": {
+    "mini": "MINI",
+    "mega": "MINOR",
+    "minor": "MINOR",
+    "major": "MAJOR",
+    "grand": "GRAND",
+    "last": "SON"
+  },
+  "menu": {
+    "single-bet": "Tekli Bet",
+    "home": "Ana Sayfa",
+    "chat": "Sohbet",
+    "music": "Müzik",
+    "sound": "Ses",
+    "animation": "Animasyon",
+    "history": "Bahis Geçmişi",
+    "quick-guide": "Hızlı Rehber",
+    "payout-limits": "Ödemeler & Limitler",
+    "provably-fair": "Provably Fair",
+    "game-help": "Oyun Yardımı"
+  },
+  "left-sidebar": {
+    "bets": "BAHİSLER",
+    "history": "GEÇMİŞ",
+    "best": "EN İYİLER",
+    "stats": "Çarpanlar",
+    "total-win": "TOPLAM",
+    "no-data": "Gösterilecek veri yok",
+    "day": "Gün",
+    "month": "Ay",
+    "year": "Yıl",
+    "best_tab": {
+      "cashed-multiplier": "ÇEKİLEN ÇARPAN",
+      "wins": "KAZANÇLAR",
+      "results": "SONUÇLAR",
+      "round": "Tur",
+      "bet": "Bahis",
+      "win": "Kazanç"
+    },
+    "stats_tab": {
+      "last-results": "SONUÇLAR",
+      "chart": "İSTATİSTİKLER"
+    }
+  },
+  "chat": {
+    "chat-title": "SOHBET",
+    "send": "GÖNDER",
+    "no-msg": "Henüz mesaj yok",
+    "type-msg": "Mesaj yaz...",
+    "wait": "BEKLE",
+     "error": {
+        "betneeded": "Sohbeti başlatmak için bahis yapın",
+        "messagetoolong": "Mesaj çok uzun",
+        "unauthorized": "Lütfen tekrar giriş yapın",
+        "default": "Sohbet hatası oluştu"
+      }
+  },
+  "footer": {
+    "balance": "BAKİYE",
+    "total-bet": "TOPLAM BAHİS",
+    "in-play": "OYUNDA",
+    "no-prev-rounds": "Önceki raund yok"
+  },
+  "bet-panel": {
+    "confirm-bet": "BAHİS",
+    "cancel-bet": "İPTAL ET",
+    "cashout": "NAKİT ÇEK",
+    "auto-cashout": "OTO Nakit Çek",
+    "autoplay": "OTO OYUN",
+    "bet-per-round": "Tur Başına Bahis Tutarı",
+    "rounds": "TUR",
+    "total": "TOPLAM",
+    "bet": "BAHİS",
+    "wait-next": "Bir sonraki tur bekliyor"
+  },
+  "fairness-modal": {
+    "round": "TUR",
+    "server-seed": "Sunucu Seed",
+    "created-by-us": "Bizim oluşturduğumuz",
+    "client-seed": "Kullanıcı Seed",
+    "created-by-player": "Oyuncu tarafından oluşturulan",
+    "player": "Oyuncu",
+    "seed": "Seed",
+    "combined-sha512": "SHA512 Hash",
+    "combined-msg": "Yukarıdaki seed’ler birleştirilip SHA512 Hash’e dönüştürüldü. Bu sizin oyun sonucunuzdur.",
+    "result": "Sonuç"
+  },
+  "history-popup": {
+    "bet-history": "BAHİS GEÇMİŞİ",
+    "loading": "Yükleniyor",
+    "no-history": "Bahis geçmişi bulunamadı",
+    "bet": "Bahis",
+    "multiplier": "Çarpan",
+    "load-more": "Daha Fazla",
+    "no-more-bets": "Bahisler Alındı",
+    "aviation": "AVIATION",
+    "bet-details": "BAHİS DETAYLARI",
+    "total-bet": "Toplam bahis",
+    "win": "Kazanç",
+    "your-multiplier": "SENİN ÇARPANIN",
+    "round-result": "Tur Sonucu",
+    "round-result-pending": "Tur sonucu bekleniyor.",
+    "loss": "KAYIP",
+    "bet-id": "Bet ID",
+    "round-id": "Tur ID",
+    "you-can-check": "Bu bahsin adil olduğunu doğrulayabilirsin"
+  },
+  "quick-guide": {
+    "quick-guide-title": "HIZLI REHBER",
+    "place-bets": "Bahislerinizi yapın",
+    "place-bets-desc": "Bahisleri onaylayın ve turun başlamasını bekleyin.",
+    "watch": "Çarpanı izleyin",
+    "watch-desc": "Çarpan büyüdükçe, olası kazancınız da artar.",
+    "claim": "Kazançlarınızı Alın",
+    "claim-desc": "Uçak kaybolmadan önce nakit çekimi yaparak kazancınızı güvence altına alın."
+  },
+  "payouts-popup": {
+    "payouts-title": "ÖDEMELER & LİMİTLER",
+    "min-bet": "Minimum bahis limiti",
+    "max-bet": "Maksimum bahis limiti",
+    "max-win": "Tek bahis için maksimum kazanç"
+  },
+  "game-help": {
+    "game-help-title": "OYUN YARDIMI",
+    "game-desc": "Oyun Açıklaması",
+    "game-desc-text": "Aviation, “crash” türünde gerçek zamanlı çok oyunculu bir şans oyunudur. Çarpan 1.00x değerinden başlar ve uçak havalandıkça çarpan değeri yükselir. Amaç, uçak kaybolmadan önce “Nakit Çek” butonu ile bahsi çekmektir. Butona tıklandığı andaki çarpan değeri ile bahis miktarı çarpılır.",
+    "rtp": "RTP",
+    "rtp-txt": "97.5%",
+    "max-mult": "Maksimum Çarpan",
+    "max-mult-txt": "5000x",
+    "reliability": "Güvenilirlik",
+    "reliability-txt": "Sonuçlar tamamen şeffaf olan Provably Fair algoritması ile belirlenir.",
+    "game-func": "Oyun Fonksiyonları",
+    "betting": "Bahis & Nakit Çekme",
+    "betting-p1": "Bahis yapmak için bahis miktarı seçip, “Bahis” butonuna basılır.",
+    "betting-p2": "Tur başlamadan önce “İptal” butonu ile bahis iptal edilebilir.",
+    "betting-p3": "Bahis miktarı Aşağı ve Yukarı ok tuşlarıyla değiştirilebilir veya özel bir değer girilebilir.",
+    "betting-p4": "İkinci bahis paneli ekleyerek aynı turda iki bahis yapabilirsin.",
+    "betting-p5": "Kazanç hesaplama formülü Kazanç = Bahis miktarı ✕ Nakit Çıkış çarpanı",
+    "betting-p6": "Kazanç elde etmek için uçağın kaybolmasından önce nakit çıkışı yapılmalıdır.",
+    "autoplay": "Oto Oyun & Oto Nakit Çek",
+    "autoplay-p1": "Oto Bahis: Bahis, seçilen el miktarı kadar otomatik olarak yatırılır.",
+    "autoplay-p2": "Oto Nakit Çek: Belirlenen çarpana ulaşıldığında kazanç otomatik çekilir.",
+    "jackpot": "Jackpot Özelliği",
+    "jackpot-p1": "Jackpot sistemi, oyunda 2 veya daha fazla oyuncu olduğunda devreye girer.",
+    "jackpot-p2": "4 farklı havuz vardır: Mini, Minor, Major, Grand.",
+    "jackpot-p3": "Jackpot kazananları rastgele belirlenir ve ödüller anında bakiyeye eklenir.",
+    "jackpot-p4_1": "5 ",
+    "jackpot-p4_2": "ve üzeri bahisler jackpot için geçerlidir.",
+    "jackpot-p5": "1.01x ve üzeri çarpanlarla yapılan bahisler jackpot için geçerlidir.",
+    "live": "Bahisler & İstatistikler",
+    "live-p1": "“Bahisler” panelinde, o turdaki tüm oyuncu bahisleri listelenir.",
+    "live-p2": "“En İyiler” sekmesinde, oyuncuların istatistikleri, kazançları ve ulaşılan en yüksek çarpanları gösterilir.",
+    "game-menu": "Game Menu",
+    "menu-p1": "Chat",
+    "menu-p2": "Müzik",
+    "menu-p3": "Ses",
+    "menu-p4": "Animasyon",
+    "menu-p5": "Geçmiş",
+    "menu-p6": "Oyun Kılavuzu",
+    "menu-p7": "Ödemeler ve Limitler",
+    "menu-p8": "Provably Fair",
+    "menu-p9": "Oyun Yardımı",
+    "menu-p1-txt": "Oyun sırasında diğer oyuncularla sohbet edilmesini sağlar.",
+    "menu-p2-txt": "Arka plan müziği açıp kapatılır.",
+    "menu-p3-txt": "Oyunun efekt sesleri açıp kapatılır.",
+    "menu-p4-txt": "Uçuş animasyonu açıp kapatılır. Daha sade görünüm için kapalı kullanılabilir.",
+    "menu-p5-txt": "Geçmiş oyun sonuçları ve kullanıcı bahis geçmişi görüntülenir.",
+    "menu-p6-txt": "Oyun hakkında kısa ve özet bir rehber gösterir.",
+    "menu-p7-txt": "Oyunda belirlenen bahis, kazanç ve çarpan limitleri buradan kontrol edilir.",
+    "menu-p8-txt": "Oyunun her turunun adil ve şeffaf olduğunun kontrol edilebileceği sistemdir.",
+    "menu-p9-txt": "Oyunun tüm kurallarının ve açıklamaların bulunduğu detaylı bilgi sayfasıdır.",
+    "malfunction": "Arıza & Bağlantı Durumları",
+    "disconnected": "Bağlantı Kesilirse",
+    "disconnected-text": "İnternet bağlantısı kesilirse, o anda geçerli çarpan üzerinden kazanç hesaplanır ve bakiyeye eklenir.",
+    "sys-fail": "Sistem Arızası",
+    "sys-fail-text": "Oyun sırasında teknik bir problem olursa, o turdaki bahisler geçersiz sayılır ve yatırılan bahisler hesaplara geri eklenir."
+  },
+  "provably-settings": {
+    "settings-title": "Provably Fair Ayarları",
+    "client-your": "İstemci (sizin) Seed'i",
+    "client-txt": "Tur sonuçları, sunucu seed'i ve turun ilk 3 banis birleşimiyle belirlenir.",
+    "random": "Her yeni oyunda rastgele",
+    "manually": "Manuel",
+    "change": " Değişim",
+    "server": "Sunucu Seed'i",
+    "server-txt": "SHA256 ile şifrelenmiş",
+    "check-fair": "Bahis geçmişinden her bir bahsin adil olup olmadığını kontrol edebilirsiniz",
+    "what": "Provably Fair Nedir?",
+    "change-seed": "Seed'i Değiştir",
+    "seed-chars": "Seed en az 16 alfanümerik karakterden oluşmalıdır.",
+    "save": "Kaydet",
+    "cancel": "İptal"
+  },
+  "provably-info": {
+    "info-title": "Provably Fair Nedir",
+    "desc": "AVIATION, “Provably Fair” adlı şifreleme teknolojisine dayanmaktadır. Bu teknoloji, oyun sonuçlarının %100 adil olmasını garanti eder. Bu teknoloji sayesinde, herhangi bir üçüncü tarafın oyun sürecine müdahale etmesi imkansızdır.",
+    "how-works": "Nasıl Çalışır?",
+    "quick-explain1": "Hızlı açıklama",
+    "quick-explain1-txt": "Her turun sonucu (Aviation oyununun çarpanı) sunucularımızda oluşturulmaz. Tur oyuncularının yardımıyla oluşturulur ve tamamen şeffaftır. Bu sayede, hiç kimse oyun sonucunu manipüle edemez. Ayrıca, herkes oyunun adil olduğunu kontrol edebilir ve onaylayabilir.",
+    "quick-explain2": "Daha fazla bilgi",
+    "quick-explain2-txt": "Tur sonucu, turun dört bağımsız katılımcısından oluşturulur: oyun operatörü ve turun ilk 3 bahisçisi. Operatör, sunucu seed'ini (rastgele 16 sembol) oluşturur. Bu sunucu seed'i hash versiyonu, tur başlamadan önce herkese açık olarak mevcuttur (Kullanıcı menüsünde, “Provably Fair Ayarları'nı ve ardından “Sonraki sunucu tohumu SHA256”yı kontrol edin). İstemci tohumu, her oyuncunun tarafında oluşturulur ve tur başladığında ilk 3 bahisçi, tur sonucunun oluşturulmasına katılır. Tur başladığında, oyun sunucu tohumunu üç istemci seed'i ile birleştirir. Birleştirilen sembollerden SHA512 hash oluşturulur ve bu hash'ten oyun sonucu oluşturulur."
+  },
+  "connection-error": {
+    "title": "Bağlantı Hatası",
+    "desc": "Sunucuya bağlanılamıyor. Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.",
+    "init": "Sunucuya bağlanılamıyor. Lütfen init bağlantınızı kontrol edin ve tekrar deneyin."
+  },
+  "maintenance": {
+    "title": "Bakım Modu!",
+    "desc": "Daha sonra tekrar deneyin."
+  },
+  "session":{
+    "title": "Oturum Süresi Doldu!",
+    "desc": "Devam etmek için sayfayı yenileyin."
+  },
+  "notifications": {
+    "disconnected": "Bağlantı kesildi",
+    "reconnecting": "Yeniden bağlanılıyor...",
+    "reconnected": "Bağlantı başarılı"
+  },
+  "copy": "Kopyala",
+  "copied": "Kopyalandı",
+  "set-pic": "KULLANICI RESMİ AYARLA",
+  "set": "KAYDET",
+  "low-balance": "Yetersiz bakiye",
+  "next-game": "Sonraki Oyun",
+  "sec": "sn",
+  "apply": "UYGULA",
+  "error": "Hata"
+}

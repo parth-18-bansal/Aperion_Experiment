@@ -1,0 +1,213 @@
+.jackpot-box {
+  padding: 0px 2px 7px;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+    .title {
+        font-weight: 900;
+        margin-top: -15px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    }
+    .amount {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin-top: -5px;
+        font-weight: 900;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+
+        ::ng-deep .odometer,
+        ::ng-deep .odometer-digit,
+        ::ng-deep .odometer-value {
+            overflow: visible !important;
+        }
+
+        ::ng-deep .odometer-value,
+        ::ng-deep .odometer-digit-inner {
+            font-family: inherit !important;
+            text-shadow: inherit !important;
+            color: inherit !important;
+            font-weight: inherit !important;
+        }
+    }
+}
+
+
+.jackpot-box.jackpot-mega {
+    background: linear-gradient(
+        145deg,
+        #C55000,
+        #F16505,
+        #FF9540,
+        #D26A00,
+        #D76F05,
+        #DB821F,
+        #D76500
+    );
+
+    border: 2px solid #FFB76A;
+        .title {
+            color: #ffa14a;
+        }
+}
+
+.jackpot-box.jackpot-mini {
+     background: linear-gradient(
+        145deg,
+        #469406,
+        #4C9B07,
+        #88D242,
+        #62B208,
+        #75B72F,
+        #498E00,
+        #386C05
+    );
+
+    border: 2px solid #B6FB84;
+    .title {
+        color: #a7df7e;
+    }
+}
+
+.jackpot-box.jackpot-major {
+   background: linear-gradient(
+        145deg,
+        #7B008F,
+        #A634B8,
+        #B957C5,
+        #9100A2,
+        #8E009F,
+        #A64FB2,
+        #570061
+    );
+
+    border: 2px solid #DB62E7; 
+    .title {
+        color: #e970f3;
+    }
+}
+
+.jackpot-box.jackpot-grand {
+    background: linear-gradient(
+        145deg,
+        #9E0000,
+        #D53838,
+        #A00000,
+        #AF0000,
+        #960000,
+        #AC0000,
+        #F45D5D,
+        #AC0000
+    );
+     border: 2px solid #BD4242;
+    .title {
+        color: #ff4747;
+    }
+}
+
+@keyframes jackpot-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.jackpot-blink {
+  animation: jackpot-blink 0.6s ease-in-out infinite;
+}
+
+@media (max-width: 1025px) {
+    .jackpot-box .title {
+        margin-top: -12px;
+    }      
+    .jackpot-box .amount {
+        margin-top: 0px;
+    }      
+}
+
+@media (max-width: 768px) {
+    .jackpot-box {
+        padding: 0px 2px 4px;
+    }
+    .jackpot-box .title {
+        margin-top: -11px;
+    } 
+    .jackpot-box .amount {
+        margin-top: -2px;
+    }      
+}
+
+@media (max-width: 435px) {
+    .mob-jackpot-container{
+        gap: 3px;
+    }
+    .jackpot-box {
+        padding: 0px 1px 4px;
+    }
+}
+
+@media (max-width: 427px) {
+    .jackpot-box {
+        padding: 0px 1px 2px;
+    }
+    .jackpot-box .title {
+        margin-top: -11px;
+    } 
+    .jackpot-box .amount {
+        margin-top: -6px;
+    } 
+    .title {
+        font-size: 10px;
+    } 
+     .amount {
+        font-size: 8.5px;
+    }
+}
+
+@media (max-width: 350px) {
+    .jackpot-box {
+        padding: 0px 1px 2px;
+    }
+     .amount {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 295px) {
+    .mob-jackpot-container{
+        gap: 1px;
+    }
+    .amount {
+        font-size: 7px;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 530px) {
+  .midArea{
+    width: 30%;
+  }
+  .betListArea{
+    width: 70%;
+  }
+}
+
+@media (max-height: 410px) {
+  .round-history-container{
+    display: none;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 410px) {
+    img.logo-img{
+        width: 80px;
+    }
+    .main-container{
+        padding: 4px;
+    }
+    footer{
+        padding: 2px 4px;
+    }
+    .bet-balance-container{
+        margin-bottom: 2px;
+    }
+}

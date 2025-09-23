@@ -1,0 +1,55 @@
+<div
+  class="modal bg-black/90 fixed top-0 left-0 w-full h-full flex items-start  justify-center p-4 xl:p-16"
+  aria-label="Modal container">
+  <div
+    class="w-full max-w-2xl h-full max-h-full flex flex-col panel-gradient-bg border-2 border-white/10 rounded-2xl animated-modal"
+    role="main">
+    <header class="modal-header shrink-0" aria-label="Modal header" role="heading">
+      <div
+        class="modal-title py-4 px-4 xl:px-8 xl:text-2xl h-[55px] xl:h-[88px] border-b border-1 border-white/10 flex items-center justify-between relative">
+        <div class="title text-white uppercase font-bold">{{ 'quick-guide.quick-guide-title' | translate  }}</div>
+        <div
+          (click)="closeModal()"
+          class="btn close-modal text-4xl xl:text-6xl cursor-pointer absolute right-4 xl:right-8 text-white/50 hover:text-white transition-colors"
+          aria-label="Close modal">
+          &times;
+        </div>
+      </div>
+    </header>
+    <section class="modal-content flex-1 overflow-y-auto p-4 xl:p-8 text-[color:#b0b0b0]"
+      aria-label="Modal content">
+      <div
+        class="grid grid-cols-1 text-center xl:text-left gap-4 justify-between items-stretch text-xs md:text-sm xl:text-lg"
+        role="contentinfo">
+        <div class=" grid grid-cols-1 xl:grid-cols-2 items-center justify-between gap-4 group" role="listitem">
+          <div class="rounded-xl w-[240px] aspect-video mx-auto">
+            <img src="images/guide-1.png" class="w-full" alt="">
+          </div>
+          <div class="flex flex-col gap-1 xl:group-even:-order-1 xl:group-even:text-right">
+            <div class="font-bold text-white text-lg" role="heading">1. {{ 'quick-guide.place-bets' | translate  }}</div>
+            <div class="text-white/60 text-sm md:text-base">{{ 'quick-guide.place-bets-desc' | translate  }}</div>
+          </div>
+        </div>
+        <div class=" grid grid-cols-1 xl:grid-cols-2 items-center justify-between gap-4 group" role="listitem">
+          <div class="rounded-xl w-[240px] aspect-video mx-auto">
+            <img src="images/guide-2.png" class="w-full" alt="">
+          </div>
+          <div class="flex flex-col gap-1 xl:group-even:-order-1 xl:group-even:text-right">
+            <div class="font-bold text-white text-lg " role="heading">2. {{ 'quick-guide.watch' | translate  }}</div>
+            <div class="text-white/60 text-sm md:text-base">{{ 'quick-guide.watch-desc' | translate  }}</div>
+          </div>
+        </div>
+        <div class=" grid grid-cols-1 xl:grid-cols-2 items-center justify-between gap-4 group" role="listitem">
+          <div class="rounded-xl w-[240px] aspect-video mx-auto">
+            <img src="images/guide-3.png" class="w-full" alt="">
+          </div>
+          <div class="flex flex-col gap-1 xl:group-even:-order-1 xl:group-even:text-right">
+            <div class="font-bold text-white text-lg" role="heading">3. {{ 'quick-guide.claim' | translate  }}</div>
+            <div class="text-white/60 text-sm md:text-base">{{ 'quick-guide.claim-desc' | translate  }}</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>

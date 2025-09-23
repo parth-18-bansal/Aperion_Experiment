@@ -1,0 +1,65 @@
+
+<div class="modal bg-black/90 fixed top-0 left-0 w-full h-full flex items-center  justify-center p-4 xl:p-16 overflow-auto"
+  aria-label="Modal container">
+  <div class="w-full max-w-3xl min-h-[400px] panel-gradient-bg  border-2 border-white/10 rounded-2xl animated-modal" role="main">
+
+    <header class="modal-header" aria-label="Modal header" role="heading">
+      <div
+        class="modal-title py-4 px-4 xl:px-8 xl:text-2xl h-[55px] xl:h-[88px] border-b border-1 border-white/10 flex items-center justify-between relative">
+        <div class="title text-white uppercase font-bold">{{ 'history-popup.bet-history' | translate  }}</div>
+        <div (click)="closeModal()"
+          class="btn close-modal text-4xl xl:text-6xl cursor-pointer absolute right-4 xl:right-8 text-white/50 hover:text-white transition-colors"
+          aria-label="Close modal">
+          &times;
+        </div>
+      </div>
+    </header>
+
+    <section class="modal-content p-2 sm:p-4 xl:p-8 text-[color:#b0b0b0]" aria-label="Modal content" role="">
+      <div role="list" class="w-full grid grid-cols-1 gap-2 max-h-[400px] overflow-y-auto" 
+           (scroll)="onScroll($event)">
+        
+        <div *ngFor="let bet of bets" role="listitem" 
+             [class]="bet.winAmount > bet.amount.bet ? 'list-item list-win-item' : 'list-item'"
+             (click)="openBetDetail(bet.betId)"
+             class="btn cursor-pointer">
+          <div class="date text-white/60">{{ bet.createdAt | date:'d MMM yyyy HH:mm':'UTC' | uppercase }}</div>
+          <div>
+            <span *ngIf="bet.winAmount > bet.amount.bet" class="text-green-400">
+              {{ getCurrencySym(bet.currency || 'USD') }}{{ bet.winAmount | number:'':'en' }}
+            </span>
+            <span *ngIf="bet.winAmount <= bet.amount.bet" class="text-red-400">
+              {{ getCurrencySym(bet.currency || 'USD') }}{{ bet.amount.bet | number:'':'en' }}
+            </span>
+          </div>
+          <div class="text-xs text-white/40 mt-1 hidden sm:block">
+            <span>{{ 'history-popup.bet' | translate  }}:{{ getCurrencySym(bet.currency || 'USD') }}{{ bet.amount.bet | number:'':'en' }}</span>
+            <span class="mx-2">|</span>
+            <span>{{ 'history-popup.multiplier' | translate  }}: {{ bet.multiplier }}x</span>
+          </div>
+        </div>
+
+        <div *ngIf="hasMore" role="button" class="list-item load-more" (click)="loadMore()">
+          <div>{{ 'history-popup.load-more' | translate  }}</div>
+        </div>
+
+        <div *ngIf="!hasMore && bets.length > 0" class="text-center py-4">
+          <div class="text-white/50">{{ 'history-popup.no-more-bets' | translate  }}</div>
+        </div>
+
+        <div *ngIf="bets.length === 0" class="text-center py-8">
+          <div class="text-white/50">{{ 'history-popup.no-history' | translate  }}</div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<history-detail 
+  *ngIf="showDetail" 
+  [betId]="selectedBetId"
+  (close)="closeBetDetail()"
+  (openRoundDetail)="openRoundDetail($event)">
+</history-detail>

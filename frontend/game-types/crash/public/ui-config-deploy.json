@@ -1,0 +1,13 @@
+{
+  "gamePath": "./aviation",
+  "maxBetPanels": 2,
+  "minAutoCahoutMultiplier": 1.01,
+  "initialBetValue": 5,
+  "betValueArray": [1, 5, 10, 15, 25, 50, 100, 150, 200, 250, 500, 1000, 1500, 2000, 2500, 4000, 5000, 10000, 15000,25000],
+  "betValueIncrements": [10, 50, 250, 1000],
+  "autoBetCountOptions": [10, 25, 50, 100],
+  "autoBetCountIncrements": [2, 5, 10],
+  "hasJackpotFeature": true,
+  "messageWaitingTimeInSec": 5,
+  "chatCharLimit": 240
+}

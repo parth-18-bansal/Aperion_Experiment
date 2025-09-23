@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.chat-box {
+
+  &__message {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  &__input-form {
+    
+    textarea {
+      background: transparent;
+      border-top: 1px solid #ffffff33;
+      padding: 0.75rem 1rem;
+      font-size: 12px;
+      &:disabled{
+        opacity: 1;
+      }
+      
+      &:focus {
+        outline: none;
+      }
+      
+      &::placeholder {
+        color: #909090;
+        font-style: italic;
+      }
+
+    }
+  }
+}

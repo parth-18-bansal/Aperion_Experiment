@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+  },
+  "extends": "../tsconfig.base.json",
+  "include": [
+    "src/**/*.ts",
+    "index.ts",
+    "global.d.ts"
+  ]
+}

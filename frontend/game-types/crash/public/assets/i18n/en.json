@@ -1,0 +1,241 @@
+{
+  "splash": {
+    "welcome": "Aperion",
+    "initializing": "Aviation",
+    "loading": "Loading"
+  },
+  "navbar": {
+    "game-name": "Game Name",
+    "navbar-content": "Navbar Content"
+  },
+  "jackpot": {
+    "mini": "MINI",
+    "mega": "MINOR",
+    "minor": "MINOR",
+    "major": "MAJOR",
+    "grand": "GRAND",
+    "last": "LAST"
+  },
+  "menu": {
+    "single-bet": "Single Bet",
+    "home": "Home",
+    "chat": "Chat",
+    "music": "Music",
+    "sound": "Sound",
+    "animation": "Animation",
+    "history": "History",
+    "quick-guide": "Quick Guide",
+    "payout-limits": "Payout & Limits",
+    "provably-fair": "Provably Fair",
+    "game-help": "Game Help"
+  },
+  "left-sidebar": {
+    "bets": "BETS",
+    "history": "HISTORY",
+    "best": "BEST",
+    "stats": "STATS",
+    "total-win": "TOTAL WIN",
+    "no-data": "Nothing to show",
+    "day": "Day",
+    "month": "Month",
+    "year": "Year",
+    "best_tab": {
+      "cashed-multiplier": "CASHED MULTIPLIER",
+      "wins": "WINS",
+      "results": "RESULTS",
+      "round": "Round",
+      "bet": "Bet",
+      "win": "Win"
+    },
+    "stats_tab": {
+      "last-results": "LAST RESULTS",
+      "chart": "CHARTS"
+    }
+  },
+  "chat": {
+    "chat-title": "CHAT",
+    "send": "SEND",
+    "no-msg": "No messages yet",
+    "type-msg": "Type Message...",
+    "wait": "WAIT",
+    "error": {
+      "betneeded": "Place a bet to start the chat",
+      "messagetoolong": "Message is too long",
+      "unauthorized": "Please log in again",
+      "default": "Chat error occurred"
+    }
+  },
+  "footer": {
+    "balance": "BALANCE",
+    "total-bet": "TOTAL BET",
+    "in-play": "IN PLAY",
+    "no-prev-rounds": "No previous rounds"
+  },
+  "bet-panel": {
+    "confirm-bet": "CONFIRM BET",
+    "cancel-bet": "CANCEL BET",
+    "cashout": "CASHOUT",
+    "auto-cashout": "AUTO CASHOUT",
+    "autoplay": "AUTOPLAY",
+    "bet-per-round": "Bet per round",
+    "rounds": "ROUNDS",
+    "total": "Total",
+    "bet": "BET",
+    "wait-next": "Waiting for next round"
+  },
+  "fairness-modal": {
+    "round": "ROUND",
+    "server-seed": "Server Seed",
+    "created-by-us": "Created by us",
+    "client-seed": "Client Seed",
+    "created-by-player": "Created by the player",
+    "player": "Player",
+    "seed": "Seed",
+    "combined-sha512": "Combined SHA512 Hash",
+    "combined-msg": "The above seeds have been combined and converted to SHA512 Hash. This is your game result.",
+    "result": "Result"
+  },
+  "history-popup": {
+    "bet-history": "BET HISTORY",
+    "loading": "Loading",
+    "no-history": "No bet history found",
+    "bet": "Bet",
+    "multiplier": "Multiplier",
+    "load-more": "Load More",
+    "no-more-bets": "No more bets to load",
+    "aviation": "AVIATION",
+    "bet-details": "BET DETAILS",
+    "total-bet": "Total bet",
+    "win": "Win",
+    "your-multiplier": "YOUR MULTIPLIER",
+    "round-result": "Round Result",
+    "round-result-pending": "Waiting for round result.",
+    "loss": "LOSS",
+    "bet-id": "Bet ID",
+    "round-id": "Round ID",
+    "you-can-check": "You can check that this bet is provably fair"
+  },
+  "quick-guide": {
+    "quick-guide-title": "QUICK GUIDE",
+    "place-bets": "Place Your Bets",
+    "place-bets-desc": "Confirm bets and wait for the round to start.",
+    "watch": "Watch the multiplier grow",
+    "watch-desc": "The higher the multiplier grows, the more you can potentially win.",
+    "claim": "Claim Your Winnings",
+    "claim-desc": "Secure your wins by cashing out at any time before the plane flies away."
+  },
+  "payouts-popup": {
+    "payouts-title": "PAYOUTS & LIMITS",
+    "min-bet": "Minimum bet limit",
+    "max-bet": "Maximum bet limit",
+    "max-win": "Maximum win for one bet"
+  },
+  "game-help": {
+    "game-help-title": "GAME HELP",
+    "game-desc": "Game Description",
+    "game-desc-text": "Aviation is a real-time multiplayer game of chance in the “crash” genre. The multiplier starts at 1.00x and increases as the plane takes off. The objective is to cash out your bet using the “Cash Out” button before the plane disappears. ",
+    "rtp": "RTP",
+    "rtp-txt": "97.5%",
+    "max-mult": "Maximum Multiplier",
+    "max-mult-txt": "5000x",
+    "reliability": "Reliability",
+    "reliability-txt": "Results are determined using the Provably Fair algorithm, which ensures complete transparency.",
+    "game-func": "Game Functions",
+    "betting": "Betting & Cashout",
+    "betting-p1": "To place a bet, select the bet amount and press the “Bet” button.",
+    "betting-p2": "Bets can be canceled before the round starts by pressing the “Cancel” button.",
+    "betting-p3": "The bet amount can be changed using the Up and Down arrow keys or by entering a specific value.",
+    "betting-p4": "Two bets can be placed in the same round by adding a second bet panel.",
+    "betting-p5": "The winnings calculation formula is “Winnings = Bet amount × Cashout multiplier.",
+    "betting-p6": "Cash out must be made before the plane disappears to earn winnings.",
+    "autoplay": "Autoplay & Auto Cashout",
+    "autoplay-p1": "Autoplay: The bet is automatically placed for the selected hand amount.",
+    "autoplay-p2": "Auto Cashout: The winnings are automatically withdrawn when the specified multiplier is reached.",
+    "jackpot": "Jackpot Feature",
+    "jackpot-p1": "The jackpot system is activated when there are 2 or more players in the game.",
+    "jackpot-p2": "There are 4 different pools: Mini, Minor, Major, Grand.",
+    "jackpot-p3": "Jackpot winners are randomly selected, and prizes are instantly added to the balance.",
+    "jackpot-p4_1": "Bets of 5 ",
+    "jackpot-p4_2": "or more qualify for the jackpot.",
+    "jackpot-p5": "Bets with multiplier of 1.01x or higher qualify for the jackpot.",
+    "live": "Bets & Statistics",
+    "live-p1": " In the “Bets” panel, all player bets for that round are listed.",
+    "live-p2": "In the “Top Players” tab, players' statistics, winnings, and highest multipliers reached are displayed.",
+    "game-menu": "Game Menu",
+    "menu-p1": "Chat",
+    "menu-p2": "Music",
+    "menu-p3": "Sound",
+    "menu-p4": "Animation",
+    "menu-p5": "History",
+    "menu-p6": "Game Guide",
+    "menu-p7": "Payments and Limits",
+    "menu-p8": "Provably Fair",
+    "menu-p9": "Game Help",
+    "menu-p1-txt": "Allows chatting with other players during the game.",
+    "menu-p2-txt": "Turns background music on or off.",
+    "menu-p3-txt": "Turns game sound effects on or off.",
+    "menu-p4-txt": "Turns flight animation on or off. Can be turned off for a simpler view.",
+    "menu-p5-txt": "Displays past game results and user betting history.",
+    "menu-p6-txt": "Displays a short and concise guide about the game.",
+    "menu-p7-txt": "Controls the betting, winnings, and multiplier limits set in the game.",
+    "menu-p8-txt": "This system allows you to verify that each round of the game is fair and transparent.",
+    "menu-p9-txt": "This is a detailed information page containing all the rules and explanations of the game.",
+    "malfunction": "Malfunctions & Connection Issues",
+    "disconnected": "Disconnection",
+    "disconnected-text": " If the internet connection is lost, winnings are calculated based on the current multiplier and added to the balance.",
+    "sys-fail": "System Malfunction",
+    "sys-fail-text": "If a technical issue occurs during the game, bets for that round are deemed invalid, and the deposited bets are refunded to the accounts."
+  },
+  "provably-settings": {
+    "settings-title": "Provably Fair Settings",
+    "client-your": "Client (your) Seed",
+    "client-txt": "Round result is determined form combination of server seed and first 3 bets of the round",
+    "random": "Random on every round",
+    "manually": "Manually",
+    "change": "Change",
+    "server": "Server Seed",
+    "server-txt": "Encrypted with SHA256",
+    "check-fair": "You can check fairness of each bet from bets history",
+    "what": "What is Provably Fair?",
+    "change-seed": "Change Seed",
+    "seed-chars": "Seed must be at least 16 alphanumeric characters",
+    "save": "Save",
+    "cancel": "Cancel"
+  },
+  "provably-info": {
+    "info-title": "What is provably fair",
+    "desc": "AVIATION is based on cryptographic technology called 'Provably Fair'. This technology guarantees 100% fairness of game result. With this technology, it's impossible for any third party to interfere in game process",
+    "how-works": "How it works",
+    "quick-explain1": "Quick explanation",
+    "quick-explain1-txt": "Result of each round (Game's 'Aviation' multiplier) is not generated on our servers. It's generated with help of round players and is fully transparent. This way, it's impossible for anyone to manipulate game output. Also, anyone can check and confirm game fairness",
+    "quick-explain2": "Quick explanation",
+    "quick-explain2-txt": "Round result is generated from four independent participants of the round: game operator and first 3 betters of the round. Operator is generating server seed (random 16 symbols). Hashed version of this server seed is available publicly before round starts (in user menu, check 'Provably Fair Settings' and then 'Next server seed SHA256') Client seed is generated on the side of each player and when round starts first 3 betters are participating in generating round result. When round starts, game merges server seed with three client seeds. From merged symbols is generated SHA512 hash, and from this hash - game result"
+  },
+  "connection-error": {
+    "title": "Connection Error",
+    "desc": "Unable to connect to the server. Please check your internet connection and try again.",
+    "init": "Unable to connect to the server. Please check your init connection and try again."
+  },
+  "maintenance": {
+    "title": "Maintenance Mode!",
+    "desc": "Try again later."
+  },
+  "session":{
+    "title": "Session Expired!",
+    "desc": "Please refresh your browser to continue."
+  },
+  "notifications": {
+    "disconnected": "Disconnected from server",
+    "reconnecting": "Trying to reconnect...",
+    "reconnected": "Reconnedted to server"
+  },
+  "copy": "Copy",
+  "copied": "Copied",
+  "set-pic": "SET USERPIC",
+  "set": "SET",
+  "low-balance": "Insufficient balance",
+  "next-game": "Next Game in",
+  "sec": "sec",
+  "apply": "APPLY",
+  "error": "Error"
+}

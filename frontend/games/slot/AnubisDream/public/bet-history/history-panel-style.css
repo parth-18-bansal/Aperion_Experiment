@@ -1,0 +1,389 @@
+:root {
+  --brandColor: #fd9700;
+}
+
+.error-color{
+  color: #ff0000 !important;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.font-11 {
+  font-size: 11px;
+}
+
+.invisible {
+  display: none !important;
+}
+
+/* === Modal Root === */
+.history-modal-root {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  padding: 35px 50px;
+  z-index: 99999;
+  font-family: HeadingNowText, ui-sans-serif, system-ui, sans-serif;
+}
+
+.history-modal-root .history-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+  background: #4a4a4a;
+  border-radius: 2em;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #fff3;
+  border-radius: 2em;
+  height: 10px;
+}
+
+/* === Panel === */
+.panel {
+  background: #111;
+  border: 8px solid #303030;
+  border-radius: 6px;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+  ;
+  /* position: absolute;
+  left: 50%;
+  transform: translate(-50%); */
+}
+
+/* === Modal Close Button === */
+.modal-close {
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  background: #303030;
+  border-radius: 50%;
+  border: 4px solid #303030;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.modal-close img {
+  width: 48px;
+}
+
+/* === Tabs === */
+.tab {
+  display: flex;
+  text-align: center;
+}
+
+.tab .item {
+  flex-grow: 1;
+  padding: 1em 2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.tab .item.active {
+  color: var(--brandColor);
+  border-bottom-color: var(--brandColor);
+  pointer-events: none;
+}
+
+.tab .divider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* === Shared Icon Styles === */
+.item img,
+.button img,
+.copy-icon-container,
+.replay-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.item img {
+  width: 28px;
+}
+
+.copy-icon,
+.id .icon img {
+  width: 18px;
+  opacity: 0.5;
+}
+
+.bet-detail-icon {
+  height: 30px;
+}
+
+.share-icon,
+.replay-icon,
+.button img {
+  height: 18px;
+  margin: 0 5px;
+}
+
+.id .icon {
+  background: rgba(255, 255, 255, 0.1);
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+}
+
+/* === Table Header === */
+.table-title {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 1.75fr;
+  padding: 1em;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.bet-history .date {
+  text-align: left;
+  justify-self: start;
+}
+
+/* === Table Rows === */
+.table-list {
+  max-height: 40dvh;
+  overflow-y: auto;
+}
+
+.table-list .item {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 1.25fr 1.25fr 1.75fr;
+  padding: 0.75em 1em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+  color: #828282;
+  text-align: center;
+  align-items: center;
+  transition: background 0.2s;
+}
+
+#topWinsTabContent .table-title,
+#topWinsTabContent .table-list .item {
+  grid-template-columns: 1.5fr 3fr 1.25fr 1.25fr 1.25fr 1.75fr;
+}
+
+.table-list .item .win {
+  color: #eee;
+}
+
+.table-list .item:nth-child(odd),
+.detail-list .item:nth-child(odd) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.table-list .item:nth-child(even),
+.detail-list .item:nth-child(even) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.table-list .item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* === ID layout (used in table + detail) === */
+.id {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.id.detail-panel-id {
+  justify-content: start;
+}
+
+.id .text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 70%;
+  max-width: 150px;
+  flex-shrink: 1;
+  flex-grow: 0;
+}
+
+#historyDetailPanel .id .text {
+  width: auto;
+  max-width: unset;
+}
+
+/* === Icons === */
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5em;
+}
+
+.replay-button {
+  cursor: pointer;
+}
+
+.icons img {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.icons img:hover {
+  opacity: 1;
+}
+
+/* === Empty or Loading State === */
+.bet-history-loading,
+.table-list .no-data {
+  text-align: center;
+  padding: 1em;
+  color: var(--brandColor);
+  font-weight: bold;
+}
+
+/* === Pagination === */
+.history-pagination {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.history-pagination .button,
+.bet-detail-buttons .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 1em;
+  cursor: pointer;
+}
+
+.history-pagination .button.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.history-pagination .button img {
+  width: 1em;
+  opacity: 0.75;
+}
+
+/* === Bet Detail === */
+.detail-list {
+  display: flex;
+  flex-direction: column;
+  max-height: 40dvh;
+  overflow: auto;
+}
+
+.detail-list .item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 1em;
+  font-size: 13px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 0.5em;
+  align-items: center;
+}
+
+.detail-list .item>div:first-child {
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+/* === Detail Footer Buttons === */
+.bet-detail-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bet-detail-buttons .button {
+  padding: 0.75em;
+}
+
+.bet-detail-buttons .button span {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+/* === Responsive === */
+@media screen and (max-width: 640px) {
+  .hide-sm {
+    display: none;
+  }
+
+  .table-title,
+  .table-list .item {
+    grid-template-columns: 1.5fr 1.25fr 1.75fr;
+  }
+
+  #topWinsTabContent .table-title,
+  #topWinsTabContent .table-list .item {
+    grid-template-columns: 1.5fr 1.25fr 1.75fr 1.25fr;
+  }
+
+  .history-modal-root {
+    padding: 35px 20px;
+  }
+
+  .panel {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .table-title,
+  .table-list .item,
+  .detail-list .item {
+    font-size: 12px;
+  }
+
+  .tab .item {
+    font-size: 12px;
+    padding: 0.5em;
+  }
+
+  .item img {
+    width: 20px;
+  }
+
+  .bet-detail-buttons .button span {
+    font-size: 12px;
+  }
+
+  .modal-close img {
+    width: 38px;
+  }
+
+}

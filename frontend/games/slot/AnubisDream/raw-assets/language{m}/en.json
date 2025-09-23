@@ -1,0 +1,14 @@
+{
+  "game": {
+    "tumble_win_label": "TUMBLE WIN",
+    "max_win_label": "MAX WIN",
+    "no_data": "No Data",
+    "loading": "Loading",
+    "press_anywhere_to_continue": "PRESS ANYWHERE TO CONTINUE",
+    "buy_freespin": "BUY \nFREE SPINS",
+    "buy_freespin_active": "BONUS\nACTIVE",
+    "freespins_left": "FREE SPINS\nLEFT ",
+    "freespin_left": "FREE SPIN\nLEFT ",
+    "response-error": "RESPONSE ERROR"
+  }
+}

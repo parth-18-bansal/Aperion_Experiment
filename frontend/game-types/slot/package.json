@@ -1,0 +1,35 @@
+{
+  "name": "slot-game-engine",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "start": "npm run dev",
+    "build": "vite build",
+    "release": "npm run lint && tsc && vite build",
+    "lint": "eslint .",
+    "dev": "vite"
+  },
+  "peerDependencies": {
+    "gsap": "workspace:*",
+    "howler": "workspace:*",
+    "pixi.js": "workspace:*",
+    "game-engine": "workspace:*",
+    "slot-game-ui": "workspace:*"
+  },
+  "dependencies": {
+    "@esotericsoftware/spine-pixi-v8": "4.2.82",
+    "xstate": "^5.19.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@types/node": "^22.15.31",
+    "rimraf": "workspace:*",
+    "eslint": "^9.28.0",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.34.0",
+    "vite": "workspace:*",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}

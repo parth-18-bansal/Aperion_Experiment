@@ -1,0 +1,47 @@
+<div
+  class="modal bg-black/90 fixed top-0 left-0 w-full h-full flex items-center justify-center p-4 xl:p-16 overflow-auto"
+  aria-label="Modal container">
+  <div class="w-full max-w-2xl min-h-[400px] panel-gradient-bg border-2 border-white/10 rounded-2xl animated-modal" role="main">
+    <header class="modal-header" aria-label="Modal header" role="heading">
+      <div
+        class="modal-title py-4 px-4 xl:px-8 xl:text-2xl h-[55px] xl:h-[88px] border-b border-1 border-white/10 flex items-center justify-between relative">
+        <div class="title text-white uppercase font-bold">{{ 'payouts-popup.payouts-title' | translate  }}</div>
+        <div (click)="closeModal()"
+          class="btn close-modal text-4xl xl:text-6xl cursor-pointer absolute right-4 xl:right-8 text-white/50 hover:text-white transition-colors"
+          aria-label="Close modal">
+          &times;
+        </div>
+      </div>
+    </header>
+    <section class="modal-content p-4 xl:p-8 text-[color:#b0b0b0]" aria-label="Modal content" role="">
+      <div
+        class="grid divide-y divide-white/10 grid-cols-1 text-left  justify-between items-stretch text-xs md:text-base "
+        role="contentinfo">
+
+        <div class="flex flex-col gap-2">
+          <div class="flex justify-between items-center rounded-md ring-1 ring-white/10 group">
+            <div class="px-4 flex-1">{{ 'payouts-popup.min-bet' | translate  }}</div>
+            <div
+              class="text-right text-white font-bold py-3 px-4 group-hover:text-orange-400 transition-colors duration-300">
+              {{ getCurrencySym(providerCurrency || 'USD') }}{{ betSettings.minBet | number:'1.2-2':'en' }}
+            </div>
+          </div>
+          <div class="flex justify-between items-center rounded-md ring-1 ring-white/10 group">
+            <div class="px-4 flex-1">{{ 'payouts-popup.max-bet' | translate  }}</div>
+            <div
+              class="text-right text-white font-bold py-3 px-4  group-hover:text-orange-400 transition-colors duration-300 ">
+              {{ getCurrencySym(providerCurrency || 'USD') }}{{ betSettings.maxBet | number:'1.2-2':'en' }}</div>
+          </div>
+          <div class="flex justify-between items-center rounded-md ring-1 ring-white/10  group">
+            <div class="px-4 flex-1">{{ 'payouts-popup.max-win' | translate  }}</div>
+            <div
+              class="text-right text-white font-bold py-3 px-4  group-hover:text-orange-400 transition-colors duration-300">
+              {{ getCurrencySym(providerCurrency || 'USD') }}{{ betSettings.maxWin | number:'1.2-2':'en' }}</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </div>
+</div>

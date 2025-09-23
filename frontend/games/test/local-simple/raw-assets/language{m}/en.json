@@ -1,0 +1,15 @@
+{
+  "screens": {
+    "main": {
+      "title": "Main Menu"
+    }
+  },
+  "buttons": {
+    "play": "Play",
+    "settings": "Settings"
+  },
+  "game": {
+    "winMessage": "Congratulations {{player}}, you won {{amount}} coins!",
+    "levelUp": "Level up! {{player}} reached level {{level}}!"
+  }
+}

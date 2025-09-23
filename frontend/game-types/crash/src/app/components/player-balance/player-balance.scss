@@ -1,0 +1,23 @@
+:host {
+  display: flex;
+  align-items: center;
+}
+
+.balance-container {
+  font-family: var(--font-family, 'Poppins', sans-serif);
+}
+
+.balance-label {
+  font-weight: 500;
+}
+
+.balance-value, .balance-currency {
+  font-weight: 800;
+}
+
+
+@media (max-width: 420px) {
+  .balance-container{
+      font-size: 10px;
+  }
+}

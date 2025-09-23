@@ -1,0 +1,133 @@
+// :host {
+  // position          : fixed;
+  // inset             : 0px;
+  // z-index           : 50;
+  // display           : flex;
+  // align-items       : center;
+  // justify-content   : center;
+  // --tw-bg-opacity   : 1;
+  // background-color  : rgb(0 0 0 / var(--tw-bg-opacity, 1));
+// }
+    
+// @import "tailwindcss";
+
+:host {
+  @apply fixed inset-0 z-50 flex items-center justify-center;
+}
+    
+.LoadingContainer {
+    background: radial-gradient(#121111, #000);
+    top: 0px;
+    left: 0px;
+    z-index: 99999999;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.LoadingContainer .loadingLogo {
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.LoadingContainer .loadingLogo>img {
+    width: 240px;
+    animation: loadingLogo forwards 3000ms ease-in-out
+}
+
+.LoadingContainer .LogoContainer {
+    padding-top: 1px;
+    transform: scale(1.3);
+    transform-origin: center;
+}
+
+@keyframes loadingLogo {
+    0% {
+        transform: rotate(0)
+    }
+
+    25% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(3deg)
+    }
+
+    75% {
+        transform: rotate(3deg)
+    }
+
+    100% {
+        transform: rotate(3deg)
+    }
+}
+
+.LoadingContainer .loader {
+    width: 240px;
+    height: 8px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.LoadingContainer .loader .piece {
+    width: 0px;
+    height: 8px;
+    background: #f52a2a;
+    transition: all 200ms linear
+}
+
+.LoadingContainer .finalizeLogo {
+    animation: finalizeLogo 500ms linear;
+}
+
+@keyframes finalizeLogo {
+    0% {
+        width: 90%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.RequestContainer {
+    top: 0px;
+    left: 0px;
+    background: #0006; 
+    z-index: 99999999;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.loading-circle {
+    width: 3em;
+    height: 3em;
+    border: 4px solid #fff;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

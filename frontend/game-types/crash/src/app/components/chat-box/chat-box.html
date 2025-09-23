@@ -1,0 +1,50 @@
+<div class="chat-box__container flex flex-col h-full text-sm">
+
+    <div #scrollContainer class="chat-box__messages flex-grow overflow-y-auto">
+        <!-- Message List -->
+        <div *ngFor="let msg of messages; let i = index; let even = even"
+        class="chat-box__message mb-1 pt-2 pb-3 px-3 rounded-tl-2xl rounded-br-2xl"
+        [ngClass]="even ? 'bg-[#202020]' : 'bg-[#161616]'">
+            <h5 class="chat-box__username text-xs text-[#707070] font-bold mb-1 flex justify-between items-center">
+                <div class="flex items-center justify-center gap-2">
+                    <img [src]="getAvatarPath(msg.avatar)" class="w-5 h-5 rounded-full object-cover" alt="avatar">
+                    <span>{{ msg.username }}</span>
+                </div>
+                <!-- <img src="assets/icons/reply.png" class="w-3 opacity-60 hover:opacity-90 cursor-pointer" alt="reply"> -->
+            </h5>
+            <h4 class="chat-box__message-text text-[#bcbcbc] text-xs break-all">{{ msg.message }}</h4>
+        </div>
+        <div *ngIf="messages.length === 0"
+            class="chat-box__empty-state h-full flex flex-col items-center justify-center p-2 bg-[#22222288] border-2 border-dashed border-[#ffffff55] rounded-lg text-center">
+            <div class="chat-box__empty-state__icon text-2xl mb-2 opacity-50">💭</div>
+            <div class="chat-box__empty-state__text text-white italic opacity-50">{{ 'chat.no-msg' | translate  }}</div>
+        </div>
+    </div>
+    <!-- Message Input -->
+    <form (ngSubmit)="sendMessage()" class="chat-box__input-form mt-2">
+            <textarea
+                [(ngModel)]="newMessage"
+                (ngModelChange)="onMessageChange()"
+                name="newMessage"
+                class="resize-none p-2 pb-0.5 -ml-2 text-sm w-[calc(100%+1rem)]"
+                [placeholder]="chatErrorMessage || ('chat.type-msg' | translate)"
+                [disabled]="!!chatErrorMessage"
+                autocomplete="off"
+                #textArea
+                rows="3"
+                [maxlength]="characterLimit"
+                (keydown.enter)="onEnter($event)">
+            </textarea>
+            <div class="text-right text-[10px] text-white/75 -mt-1">
+                {{ newMessage.length }} / {{ characterLimit }}
+            </div>
+        <button type="submit"
+        [disabled]="sendDisabled || chatErrorMessage"
+        class="send-btn-gradient-bg w-full text-center text-xs px-33 py-2 rounded text-white font-[500] flex items-center justify-center"
+        [class.opacity-50]="chatErrorMessage">
+            <span *ngIf="!sendDisabled">{{ 'chat.send' | translate  }}</span>
+            <span *ngIf="sendDisabled">{{ 'chat.wait' | translate  }} {{ cooldownTime }}s</span>
+            <img *ngIf="!sendDisabled" src="assets/icons/send.png" class="w-3 ml-2" alt="send">
+        </button>
+    </form>
+</div>

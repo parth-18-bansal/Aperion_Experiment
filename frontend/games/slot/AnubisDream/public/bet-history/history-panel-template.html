@@ -1,0 +1,113 @@
+<!-- MAIN HISTORY MODAL -->
+<div class="history-modal-root top">
+  <div class="history-overlay" id="historyOverlay"></div>
+  <div class="bet-history panel relative" id="historyPanel">
+    <div class="modal-close" id="modalClose">
+      <img src="assets/ui/history/modal_close_icon.svg" alt="" srcset="">
+    </div>
+
+    <div class="tab">
+      <div class="item active" id="historyTab">
+        <img src="">
+        <div class="title" data-lang="ui.history_panel.history_tab_name">Bet History</div>
+      </div>
+      <div class="divider"></div>
+      <div class="item" id="topWinsTab">
+        <img src="">
+        <div class="title" data-lang="ui.history_panel.topwins_tab_name">Top Wins</div>
+      </div>
+    </div>
+
+    <div id="historyTabContent" class="tab-content">
+      <div class="table-title">
+        <div class="date" data-lang="ui.history_panel.date">Date</div>
+        <div class="id hide-sm" data-lang="ui.history_panel.id">Bet ID</div>
+        <div class="bet" data-lang="ui.history_panel.bet">Bet</div>
+        <div class="win" data-lang="ui.history_panel.win">Win</div>
+        <div class="icons hide-sm" data-lang="ui.history_panel.play">Play</div>
+      </div>
+      <div class="table-list custom-scroll">
+
+      </div>
+    </div>
+
+    <div id="topWinsTabContent" class="tab-content invisible">
+      <div class="table-title">
+        <div class="date" data-lang="ui.history_panel.date">Date</div>
+        <div class="id hide-sm" data-lang="ui.history_panel.id">Bet ID</div>
+        <div class="bet" data-lang="ui.history_panel.bet">Bet</div>
+        <div class="win" data-lang="ui.history_panel.win">Win</div>
+        <div class="multiplier" data-lang="ui.history_panel.multiplier">Multiplier</div>
+        <div class="icons hide-sm" data-lang="ui.history_panel.play">Play</div>
+      </div>
+      <div class="table-list custom-scroll">
+
+      </div>
+    </div>
+
+    <div class="bet-detail-buttons history-pagination">
+      <div class="button prev disabled flex flex-center disabled">
+        <img src="assets/ui/history/pagination_left.svg" alt="">
+        <span data-lang="ui.history_panel.previous">Previous</span>
+      </div>
+      <div class="button next flex flex-center disabled">
+        <span data-lang="ui.history_panel.next">Next</span>
+        <img src="assets/ui/history/pagination_right.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- DETAIL MODAL -->
+  <div class="bet-history bet-detail panel relative invisible" id="historyDetailPanel">
+    <div class="modal-close" id="backFromDetail">
+      <img src="assets/ui/history/modal_left_icon.svg" alt="Back">
+    </div>
+    <div class="tab">
+      <div class="item active">
+        <img class="bet-detail-icon" src="assets/ui/history/bet_detail_icon.svg">
+        <div class="title" data-lang="ui.history_panel.bet_detail_tab_name">Bet Detail</div>
+      </div>
+    </div>
+
+    <div class="detail-list">
+      <div class="item">
+        <div data-lang="ui.history_panel.date">Date</div>
+        <div class="detail-date"></div>
+      </div>
+      <div class="item">
+        <div data-lang="ui.history_panel.id">Bet ID</div>
+        <div class="id detail-panel-id copy-icon-container">
+          <div class="text detail-id"></div>
+          <div class="icon"><img src="assets/ui/history/copy.svg" alt="Copy" class="copy-icon"></div>
+        </div>
+      </div>
+      <div class="item">
+        <div data-lang="ui.history_panel.bet">Bet</div>
+        <div class="detail-bet"></div>
+      </div>
+      <div class="item detail-multiplier-container">
+        <div data-lang="ui.history_panel.multiplier">Multiplier</div>
+        <div class="detail-multiplier"></div>
+      </div>
+      <div class="item">
+        <div data-lang="ui.history_panel.win">Win</div>
+        <div class="detail-win"></div>
+      </div>
+      <div class="item">
+        <div data-lang="ui.history_panel.type">Type</div>
+        <div class="detail-spin-type"></div>
+      </div>
+    </div>
+
+    <div class="bet-detail-buttons">
+      <div class="button flex flex-center detail-share-button">
+        <img src="assets/ui/history/share_icon.svg" alt="Share"  data-id="0" data-spinTye="" class="share-icon" />
+        <span data-lang="ui.history_panel.share">Share</span>
+      </div>
+      <div class="flex flex-center replay-button detail-replay-button button" data-id="0" data-spinTye="">
+        <img src="assets/ui/history/play_icon.svg" alt="Play" class="replay-icon">
+        <span data-lang="ui.history_panel.replay">Replay</span>
+      </div>
+    </div>
+  </div>
+</div>

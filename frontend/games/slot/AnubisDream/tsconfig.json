@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    /* Local test mode */
+    "baseUrl": ".",
+    "paths": {
+      // import "game-engine" dediğinde hem kodu hem tipi çeksin
+      "game-engine": [
+        "node_modules/game-engine/dist/types/index.ts"
+      ],
+      "slot-game-engine": [
+        "node_modules/slot-game-engine/dist/types/index.ts",
+      ]
+    }
+  },
+  "extends": "../../../tsconfig.base.json",
+  "include": [
+    "src",
+    "../../../game-types/slot/global.d.ts",
+    "../../../game-engine/global.d.ts"
+  ]
+}

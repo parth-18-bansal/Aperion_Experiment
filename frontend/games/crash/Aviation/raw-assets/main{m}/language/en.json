@@ -1,0 +1,15 @@
+{
+    "game": {
+        "default-win": "YOU WIN",
+        "grand-win": "YOU GRAND WIN",
+        "major-win": "YOU MAJOR WIN",
+        "minor-win": "YOU MINOR WIN",
+        "mini-win": "YOU MINI WIN",
+        "version": "Version: {{ver_no}}",
+        "flew-off": "Flew Off",
+        "loading": "LOADING",
+        "next-round": "NEXT ROUND IN {{time}}s",
+        "waiting": "WAITING TO START",
+        "bets-accepted": "BETS ACCEPTED"
+    }
+}

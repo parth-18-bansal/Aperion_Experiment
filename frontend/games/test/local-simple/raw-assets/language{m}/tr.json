@@ -1,0 +1,15 @@
+{
+  "screens": {
+    "main": {
+      "title": "Ana Menü"
+    }
+  },
+  "buttons": {
+    "play": "Oynat",
+    "settings": "Ayarlar"
+  },
+  "game": {
+    "winMessage": "Tebrikler {{player}}, {{amount}} madeni para kazandınız!",
+    "levelUp": "Seviye atladınız! {{player}}, {{level}} seviyesine ulaştı!"
+  }
+}

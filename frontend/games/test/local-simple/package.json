@@ -1,0 +1,32 @@
+{
+  "name": "local-simple",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rimraf dist .assetpack manifest public/assets src/manifest.json",
+    "start": "npm run dev",
+    "build": "npm run clean && npm run lint && tsc && vite build",
+    "lint": "eslint .",
+    "dev": "npm run clean && vite"
+  },
+  "dependencies": {
+    "@esotericsoftware/spine-pixi-v8": "workspace:*",
+    "game-engine": "workspace:*",
+    "gsap": "workspace:*",
+    "pixi.js": "workspace:*",
+    "slot-game-engine": "workspace:*",
+    "slot-game-ui": "workspace:*",
+    "xstate": "^5.19.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@types/node": "^22.15.29",
+    "eslint": "^9.28.0",
+    "rimraf": "workspace:*",
+    "typescript": "~5.7.3",
+    "typescript-eslint": "^8.33.1",
+    "vite": "workspace:*",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}

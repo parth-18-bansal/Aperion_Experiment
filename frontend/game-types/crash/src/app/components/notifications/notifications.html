@@ -1,0 +1,11 @@
+<div class="notifications-wrapper" *ngIf="notifications && notifications.length > 0">
+    <ng-container *ngFor="let notification of notifications; trackBy: trackById">
+        <!-- // For Wins, we are not showing the Notification in Angular side -->
+        <ng-container >
+            <div class="notification px-4 py-4 text-sm text-center font-bold rounded-md shadow-lg min-w-[250px] max-w-[350px]"
+                [ngClass]="'notification--' + notification.type">
+                {{ notification.message | translate }}
+            </div>
+        </ng-container>
+    </ng-container>
+</div>

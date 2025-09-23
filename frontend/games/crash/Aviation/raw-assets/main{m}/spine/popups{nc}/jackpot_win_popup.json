@@ -1,0 +1,617 @@
+{
+  "skeleton": {
+    "hash": "jZdXKMLLPLQ",
+    "spine": "4.2.36",
+    "x": -1356.32,
+    "y": -867.13,
+    "width": 2567,
+    "height": 1533
+  },
+  "bones": [
+    { "name": "root" },
+    { "name": "base", "parent": "root" },
+    {
+      "name": "frame",
+      "parent": "base",
+      "length": 288.52,
+      "rotation": 0.79,
+      "x": -8.79,
+      "y": 22.73
+    },
+    {
+      "name": "glow",
+      "parent": "frame",
+      "length": 127.36,
+      "rotation": 90.4,
+      "x": 9.95,
+      "y": -0.14
+    },
+    {
+      "name": "You Win",
+      "parent": "frame",
+      "length": 67.18,
+      "rotation": -0.38,
+      "x": -0.39,
+      "y": 48.67
+    },
+    {
+      "name": "5.98x",
+      "parent": "frame",
+      "length": 42.24,
+      "rotation": -2.09,
+      "x": 9.19,
+      "y": -57.04
+    },
+    {
+      "name": "frame2",
+      "parent": "frame",
+      "length": 93.62,
+      "rotation": -179.03,
+      "x": 3.26,
+      "y": 0.15
+    },
+    {
+      "name": "back_glow",
+      "parent": "base",
+      "length": 365.71,
+      "rotation": -90.33,
+      "x": -5.72,
+      "y": 22.47
+    }
+  ],
+  "slots": [
+    { "name": "back", "bone": "root" },
+    { "name": "back_glow", "bone": "back_glow", "attachment": "back_glow" },
+    { "name": "0", "bone": "glow", "attachment": "rays" },
+    {
+      "name": "glow",
+      "bone": "glow",
+      "attachment": "glow",
+      "blend": "additive"
+    },
+    { "name": "frame", "bone": "frame", "attachment": "frame" },
+    { "name": "You Win", "bone": "You Win" },
+    { "name": "5.98x", "bone": "5.98x" },
+    { "name": "$110.34", "bone": "frame2" }
+  ],
+  "skins": [
+    {
+      "name": "default",
+      "attachments": {
+        "frame": {
+          "frame": {
+            "x": 3.33,
+            "y": -2.76,
+            "rotation": -0.79,
+            "width": 581,
+            "height": 191
+          }
+        }
+      }
+    },
+    {
+      "name": "grand",
+      "attachments": {
+        "0": {
+          "rays": {
+            "name": "vfx/rays/",
+            "color": "ff0000ff",
+            "x": 16.81,
+            "y": 70.6,
+            "scaleX": 3.0716,
+            "scaleY": 6.5474,
+            "rotation": 178.81,
+            "width": 280,
+            "height": 280,
+            "sequence": { "count": 20, "start": 0, "digits": 1 }
+          }
+        },
+        "glow": {
+          "glow": {
+            "color": "ff0000ff",
+            "x": -3.21,
+            "y": 2.7,
+            "scaleX": 5,
+            "scaleY": 5,
+            "rotation": -91.19,
+            "width": 140,
+            "height": 63
+          }
+        }
+      }
+    },
+    {
+      "name": "major",
+      "attachments": {
+        "0": {
+          "rays": {
+            "name": "vfx/rays/",
+            "color": "b300ffff",
+            "x": 16.81,
+            "y": 70.6,
+            "scaleX": 3.0716,
+            "scaleY": 6.5474,
+            "rotation": 178.81,
+            "width": 280,
+            "height": 280,
+            "sequence": { "count": 20, "start": 0, "digits": 1 }
+          }
+        },
+        "glow": {
+          "glow": {
+            "color": "f000ffff",
+            "x": -3.21,
+            "y": 2.7,
+            "scaleX": 5,
+            "scaleY": 5,
+            "rotation": -91.19,
+            "width": 140,
+            "height": 63
+          }
+        }
+      }
+    },
+    {
+      "name": "mega",
+      "attachments": {
+        "0": {
+          "rays": {
+            "name": "vfx/rays/",
+            "color": "3fff00ff",
+            "x": 16.81,
+            "y": 70.6,
+            "scaleX": 3.0716,
+            "scaleY": 6.5474,
+            "rotation": 178.81,
+            "width": 280,
+            "height": 280,
+            "sequence": { "count": 20, "start": 0, "digits": 1 }
+          }
+        },
+        "glow": {
+          "glow": {
+            "color": "94ff00ff",
+            "x": -3.21,
+            "y": 2.7,
+            "scaleX": 5,
+            "scaleY": 5,
+            "rotation": -91.19,
+            "width": 140,
+            "height": 63
+          }
+        }
+      }
+    },
+    {
+      "name": "mini",
+      "attachments": {
+        "0": {
+          "rays": {
+            "name": "vfx/rays/",
+            "color": "ffcd00ff",
+            "x": 16.81,
+            "y": 70.6,
+            "scaleX": 3.0716,
+            "scaleY": 6.5474,
+            "rotation": 178.81,
+            "width": 280,
+            "height": 280,
+            "sequence": { "count": 20, "start": 0, "digits": 1 }
+          }
+        },
+        "glow": {
+          "glow": {
+            "color": "ff9700ff",
+            "x": -3.21,
+            "y": 2.7,
+            "scaleX": 5,
+            "scaleY": 5,
+            "rotation": -91.19,
+            "width": 140,
+            "height": 63
+          }
+        }
+      }
+    }
+  ],
+  "animations": {
+    "end": {
+      "slots": {
+        "$110.34": {
+          "rgba": [
+            {
+              "time": 0.2333,
+              "color": "ffffffff",
+              "curve": [
+                0.241, 1, 0.347, 1, 0.241, 1, 0.347, 1, 0.241, 1, 0.347, 1,
+                0.241, 1, 0.347, 0
+              ]
+            },
+            { "time": 0.4, "color": "ffffff00" }
+          ]
+        },
+        "0": {
+          "rgba": [
+            { "color": "fffffff5" },
+            { "time": 0.2667, "color": "ffffffff" },
+            { "time": 0.4, "color": "ffffff00" }
+          ]
+        },
+        "5.98x": {
+          "rgba": [
+            {
+              "time": 0.2333,
+              "color": "ffffffff",
+              "curve": [
+                0.268, 1, 0.347, 1, 0.268, 1, 0.347, 1, 0.268, 1, 0.347, 1,
+                0.268, 1, 0.347, 0
+              ]
+            },
+            { "time": 0.4, "color": "ffffff00" }
+          ]
+        },
+        "back_glow": {
+          "rgba": [
+            {
+              "time": 0.3667,
+              "color": "ffffffff",
+              "curve": [
+                0.427, 1, 0.473, 1, 0.427, 1, 0.473, 1, 0.427, 1, 0.473, 1,
+                0.427, 1, 0.473, 0
+              ]
+            },
+            { "time": 0.5333, "color": "ffffff00" }
+          ]
+        },
+        "frame": {
+          "rgba": [
+            { "time": 0.4333, "color": "ffffffff" },
+            { "time": 0.5333, "color": "ffffff00" }
+          ]
+        },
+        "glow": {
+          "rgba": [
+            {
+              "color": "ffffffff",
+              "curve": [
+                0.156, 1, 0.341, 1, 0.156, 1, 0.341, 1, 0.156, 1, 0.341, 1,
+                0.156, 1, 0.341, 0
+              ]
+            },
+            { "time": 0.4, "color": "ffffff00" }
+          ]
+        },
+        "You Win": {
+          "rgba": [
+            {
+              "time": 0.2333,
+              "color": "ffffffff",
+              "curve": [
+                0.322, 1, 0.373, 1, 0.322, 1, 0.373, 1, 0.322, 1, 0.373, 1,
+                0.322, 1, 0.373, 0
+              ]
+            },
+            { "time": 0.4333, "color": "ffffff00" }
+          ]
+        }
+      },
+      "bones": {
+        "frame": {
+          "scale": [
+            { "curve": [0.111, 1, 0.224, 1.251, 0.111, 1, 0.224, 1.251] },
+            {
+              "time": 0.3,
+              "x": 1.251,
+              "y": 1.251,
+              "curve": [0.376, 1.251, 0.457, 0.221, 0.376, 1.251, 0.457, 0.221]
+            },
+            { "time": 0.5333, "x": 0.221, "y": 0.221 }
+          ]
+        },
+        "back_glow": {
+          "scale": [
+            { "curve": [0.089, 1, 0.206, 1.049, 0.089, 1, 0.206, 1.049] },
+            {
+              "time": 0.2667,
+              "x": 1.049,
+              "y": 1.049,
+              "curve": [0.358, 1.049, 0.442, 1, 0.358, 1.049, 0.442, 1]
+            },
+            { "time": 0.5333 }
+          ]
+        },
+        "glow": {
+          "scale": [
+            { "curve": [0.089, 1, 0.206, 1.177, 0.089, 1, 0.206, 1.129] },
+            {
+              "time": 0.2667,
+              "x": 1.177,
+              "y": 1.129,
+              "curve": [0.327, 1.177, 0.373, 1.029, 0.327, 1.129, 0.373, 1.014]
+            },
+            {
+              "time": 0.4333,
+              "curve": [0.464, 0.985, 0.503, 1, 0.464, 0.993, 0.503, 1]
+            },
+            { "time": 0.5333 }
+          ]
+        },
+        "You Win": {
+          "scale": [
+            { "curve": [0.022, 1, 0.044, 0.858, 0.022, 1, 0.044, 0.858] },
+            {
+              "time": 0.0667,
+              "x": 0.858,
+              "y": 0.858,
+              "curve": [0.156, 0.858, 0.239, 1.641, 0.156, 0.858, 0.239, 1.641]
+            },
+            {
+              "time": 0.3,
+              "x": 1.641,
+              "y": 1.641,
+              "curve": [0.338, 1.641, 0.389, 1.471, 0.338, 1.641, 0.389, 1.471]
+            },
+            {
+              "time": 0.4333,
+              "x": 1.349,
+              "y": 1.349,
+              "curve": [0.467, 1.257, 0.495, 1, 0.467, 1.257, 0.495, 1]
+            },
+            { "time": 0.5333 }
+          ]
+        }
+      },
+      "attachments": {
+        "grand": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0166 }] } }
+        },
+        "major": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0166 }] } }
+        },
+        "mega": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0166 }] } }
+        },
+        "mini": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0166 }] } }
+        }
+      }
+    },
+    "idle": {
+      "slots": {
+        "glow": {
+          "rgba": [
+            {
+              "color": "ffffffff",
+              "curve": [
+                0.144, 1, 0.289, 1, 0.144, 1, 0.289, 1, 0.144, 1, 0.289, 1,
+                0.144, 1, 0.289, 0.83
+              ]
+            },
+            {
+              "time": 0.4333,
+              "color": "ffffffd3",
+              "curve": [
+                0.644, 1, 0.856, 1, 0.644, 1, 0.856, 1, 0.644, 1, 0.856, 1,
+                0.644, 0.83, 0.856, 1
+              ]
+            },
+            { "time": 1.0667, "color": "ffffffff" }
+          ]
+        }
+      },
+      "bones": {
+        "frame": {
+          "scale": [
+            { "curve": [0.178, 1, 0.356, 0.939, 0.178, 1, 0.356, 0.939] },
+            {
+              "time": 0.5333,
+              "x": 0.939,
+              "y": 0.939,
+              "curve": [0.711, 0.939, 0.889, 1, 0.711, 0.939, 0.889, 1]
+            },
+            { "time": 1.0667 }
+          ]
+        }
+      },
+      "attachments": {
+        "grand": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0177 }] } }
+        },
+        "major": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0177 }] } }
+        },
+        "mega": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0177 }] } }
+        },
+        "mini": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0177 }] } }
+        }
+      }
+    },
+    "start": {
+      "slots": {
+        "$110.34": {
+          "rgba": [
+            { "color": "ffffff00", "curve": "stepped" },
+            {
+              "time": 0.3,
+              "color": "ffffff00",
+              "curve": [
+                0.4, 1, 0.5, 1, 0.4, 1, 0.5, 1, 0.4, 1, 0.5, 1, 0.4, 0, 0.5, 1
+              ]
+            },
+            { "time": 0.6, "color": "ffffffff" }
+          ]
+        },
+        "0": {
+          "rgba": [
+            { "color": "ffffff00" },
+            { "time": 0.4, "color": "ffffffff" }
+          ]
+        },
+        "5.98x": {
+          "rgba": [
+            { "color": "ffffff00", "curve": "stepped" },
+            {
+              "time": 0.3667,
+              "color": "ffffff00",
+              "curve": [
+                0.467, 1, 0.567, 1, 0.467, 1, 0.567, 1, 0.467, 1, 0.567, 1,
+                0.467, 0, 0.567, 1
+              ]
+            },
+            { "time": 0.6667, "color": "ffffffff" }
+          ]
+        },
+        "back_glow": {
+          "rgba": [
+            {
+              "color": "ffffff00",
+              "curve": [
+                0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1, 0.089, 1, 0.178, 1,
+                0.089, 0, 0.178, 1
+              ]
+            },
+            { "time": 0.2667, "color": "ffffffff" }
+          ]
+        },
+        "frame": {
+          "rgba": [
+            { "color": "ffffff00" },
+            { "time": 0.1333, "color": "ffffffff" }
+          ]
+        },
+        "glow": {
+          "rgba": [
+            { "color": "ffffff00", "curve": "stepped" },
+            {
+              "time": 0.0667,
+              "color": "ffffff00",
+              "curve": [
+                0.178, 1, 0.578, 1, 0.178, 1, 0.578, 1, 0.178, 1, 0.578, 1,
+                0.178, 0, 0.578, 1
+              ]
+            },
+            { "time": 0.6667, "color": "ffffffff" }
+          ]
+        },
+        "You Win": {
+          "rgba": [
+            { "color": "ffffff00", "curve": "stepped" },
+            {
+              "time": 0.1667,
+              "color": "ffffff00",
+              "curve": [
+                0.256, 1, 0.344, 1, 0.256, 1, 0.344, 1, 0.256, 1, 0.344, 1,
+                0.256, 0, 0.344, 1
+              ]
+            },
+            { "time": 0.4333, "color": "ffffffff" }
+          ]
+        }
+      },
+      "bones": {
+        "glow": {
+          "scale": [
+            {
+              "time": 0.1333,
+              "curve": [0.222, 1.029, 0.311, 1.087, 0.222, 1.014, 0.311, 1.043]
+            },
+            {
+              "time": 0.4,
+              "x": 1.087,
+              "y": 1.043,
+              "curve": [0.489, 1.087, 0.578, 1.029, 0.489, 1.043, 0.578, 1.014]
+            },
+            { "time": 0.6667 }
+          ]
+        },
+        "frame": {
+          "scale": [
+            {
+              "x": 0.221,
+              "y": 0.221,
+              "curve": [0.111, 0.507, 0.222, 1.251, 0.111, 0.507, 0.222, 1.251]
+            },
+            {
+              "time": 0.3333,
+              "x": 1.251,
+              "y": 1.251,
+              "curve": [0.444, 1.251, 0.556, 1, 0.444, 1.251, 0.556, 1]
+            },
+            { "time": 0.6667 }
+          ]
+        },
+        "back_glow": {
+          "scale": [
+            { "curve": [0.133, 1, 0.267, 1.049, 0.133, 1, 0.267, 1.049] },
+            {
+              "time": 0.4,
+              "x": 1.049,
+              "y": 1.049,
+              "curve": [0.489, 1.049, 0.578, 1, 0.489, 1.049, 0.578, 1]
+            },
+            { "time": 0.6667 }
+          ]
+        },
+        "You Win": {
+          "scale": [
+            {
+              "time": 0.1667,
+              "x": 1.349,
+              "y": 1.349,
+              "curve": [0.222, 1.446, 0.278, 1.641, 0.222, 1.446, 0.278, 1.641]
+            },
+            {
+              "time": 0.3333,
+              "x": 1.641,
+              "y": 1.641,
+              "curve": [0.422, 1.641, 0.511, 0.858, 0.422, 1.641, 0.511, 0.858]
+            },
+            {
+              "time": 0.6,
+              "x": 0.858,
+              "y": 0.858,
+              "curve": [0.622, 0.858, 0.644, 1, 0.622, 0.858, 0.644, 1]
+            },
+            { "time": 0.6667 }
+          ]
+        },
+        "5.98x": {
+          "translate": [
+            {
+              "time": 0.3667,
+              "x": -54.9,
+              "curve": [0.467, -54.9, 0.567, 0, 0.467, 0, 0.567, 0]
+            },
+            { "time": 0.6667 }
+          ]
+        },
+        "frame2": {
+          "translate": [
+            {
+              "time": 0.3,
+              "x": -54.9,
+              "curve": [0.4, -54.9, 0.5, 0, 0.4, 0, 0.5, 0]
+            },
+            { "time": 0.6 }
+          ]
+        }
+      },
+      "attachments": {
+        "grand": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0166 }] } }
+        },
+        "major": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0166 }] } }
+        },
+        "mega": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0166 }] } }
+        },
+        "mini": {
+          "0": { "rays": { "sequence": [{ "mode": "loop", "delay": 0.0166 }] } }
+        }
+      }
+    }
+  }
+}

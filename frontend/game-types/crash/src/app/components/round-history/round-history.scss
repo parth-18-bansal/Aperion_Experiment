@@ -1,0 +1,36 @@
+:host {
+  display: block;
+}
+
+/* Custom scrollbar for better look and feel */
+div::-webkit-scrollbar {
+  height: 2px;
+}
+
+div::-webkit-scrollbar-track {
+  background: #111111; /* bg-gray-800 */
+}
+
+div::-webkit-scrollbar-thumb {
+  background: #313131; /* bg-gray-600 */
+  border-radius: 2px;
+}
+
+.slide-in {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 420px) {
+  .rh-text{
+    font-size: 12px;
+  }
+}
