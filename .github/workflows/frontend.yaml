@@ -50,8 +50,14 @@ jobs:
 
       - name: Build games-types
         run: |
-          cd games/frontend/game-types
+          cd frontend/game-types/crash
           pnpm run build:dev
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: my-artifact
+            path: frontend/game-types/crash/dist/
 
       - name: Build game-engine
         run: |
