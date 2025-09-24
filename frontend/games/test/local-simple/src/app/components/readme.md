@@ -1,1 +1,0 @@
-Buraya component'ler gelecektir.

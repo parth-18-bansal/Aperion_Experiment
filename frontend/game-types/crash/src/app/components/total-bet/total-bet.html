@@ -1,7 +1,0 @@
-<div class="total-bet-container  text-xs md:text-sm" *ngIf="providerInfo">
-    <span class="total-bet-label inline-block sm:text-right mr-1 sm:mr-2">{{ 'footer.total-bet' | translate  }} </span>
-    <span class="total-bet-value inline-block">
-        {{ totalBetAmount | number:'1.2-2':'en' }}
-        <span class="total-bet-currency inline-block">{{ providerInfo.currency }}</span>
-    </span>
-</div>

@@ -3,7 +3,7 @@ name: Deploy Frontend to AWS S3 + CloudFront
 on:
   push:
     branches:
-        - main
+        - mainnn
 
   workflow_dispatch:
 
@@ -24,7 +24,7 @@ jobs:
             echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_DEMO_DISTRIBUTION_ID }}" >> $GITHUB_ENV
             echo "S3_PREFIX=fe-aviation-demo" >> $GITHUB_ENV
           else
-            echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_DEV_DISTRIBUTION_ID }}" >> $GITHUB_ENV
+            echo "CF_DIST_ID=E35GMZ16EN8I5N" >> $GITHUB_ENV
             echo "S3_PREFIX=fe-aviation-dev" >> $GITHUB_ENV
           fi
 
@@ -46,8 +46,10 @@ jobs:
         run: |
           if [[ "${{ github.ref_name }}" == "cicd" ]]; then
             pnpm run build:dev
-          elif [[ "${{ github.ref_name }}" == "test" ]]; then
-            pnpm run build:uat
+          elif [[ "${{ github.ref_name }}" == "qa" ]]; then
+            pnpm run build:qa
+          elif [[ "${{ github.ref_name }}" == "demo" ]]; then
+            pnpm run build:demo
           elif [[ "${{ github.ref_name }}" == "main" ]]; then
             pnpm run build:prod
           fi

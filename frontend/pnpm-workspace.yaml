@@ -1,5 +1,0 @@
-packages:
-  - "game-engine"
-  - "game-types/*"
-  - "game-ui/*"
-  - "games/*/*"

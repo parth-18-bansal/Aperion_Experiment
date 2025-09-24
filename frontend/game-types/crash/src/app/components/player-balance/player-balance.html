@@ -1,7 +1,0 @@
-<div class="balance-container text-xs md:text-sm" *ngIf="player && providerInfo">
-    <span class="balance-label inline-block mr-1 sm:mr-2">{{ 'footer.balance' | translate  }} </span>
-    <span class="balance-value inline-block">
-        {{ player.balance | number:'1.2-2':'en' }}
-        <span class="balance-currency inline-block">{{ providerInfo.currency }}</span>
-    </span>
-</div>
