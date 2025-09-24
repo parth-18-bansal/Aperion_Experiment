@@ -44,11 +44,11 @@ jobs:
       - name: Build game-types
         working-directory: frontend/game-types/crash
         run: |
-          if [[ "${{ github.base_ref }}" == "cicd" ]]; then
+          if [[ "${{ github.ref_name }}" == "cicd" ]]; then
             pnpm run build:dev
-          elif [[ "${{ github.base_ref }}" == "test" ]]; then
+          elif [[ "${{ github.ref_name }}" == "test" ]]; then
             pnpm run build:uat
-          elif [[ "${{ github.base_ref }}" == "main" ]]; then
+          elif [[ "${{ github.ref_name }}" == "main" ]]; then
             pnpm run build:prod
           fi
 
@@ -57,6 +57,11 @@ jobs:
         with:
             name: game-type-artifact
             path: frontend/game-types/crash/dist/
+
+      - name: Install games-type dependency
+        working-directory: frontend/games/crash/Aviation
+        run: |
+          pnpm install
 
       - name: Build games
         working-directory: frontend/games/crash/Aviation
