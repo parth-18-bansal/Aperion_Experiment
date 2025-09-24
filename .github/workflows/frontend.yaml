@@ -7,17 +7,27 @@ on:
 
   workflow_dispatch:
 
-# env:
-#   AWS_REGION: ${{ secrets.AWS_REGION }}
-#   S3_BUCKET: allgames-frontend
-#   CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DEV_DISTRIBUTION_ID }}
-
 jobs:
   deploy:
     runs-on: ubuntu-22.04
-    environment: ${{ github.ref_name }}
 
     steps:
+      - name: Set Environment Variables
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_PROD_DISTRIBUTION_ID }}" >> $GITHUB_ENV
+            echo "S3_PREFIX=fe-aviation-prod" >> $GITHUB_ENV
+          elif [[ "${{ github.ref }}" == "refs/heads/test" ]]; then
+            echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_TEST_DISTRIBUTION_ID }}" >> $GITHUB_ENV
+            echo "S3_PREFIX=fe-aviation-test" >> $GITHUB_ENV
+          elif [[ "${{ github.ref }}" == "refs/heads/demo" ]]; then
+            echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_DEMO_DISTRIBUTION_ID }}" >> $GITHUB_ENV
+            echo "S3_PREFIX=fe-aviation-demo" >> $GITHUB_ENV
+          else
+            echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_DEV_DISTRIBUTION_ID }}" >> $GITHUB_ENV
+            echo "S3_PREFIX=fe-aviation-dev" >> $GITHUB_ENV
+          fi
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -26,32 +36,21 @@ jobs:
         with:
           version: 9
 
-      - name: Install dependencies
+      - name: Install games-type dependency
+        working-directory: frontend/game-types/crash
         run: |
-          cd frontend/game-types/crash
           pnpm install
 
-  #  🔹 Choose environment (dev, test, prod, demo)
-  #     - name: Set Environment Variables
-  #       run: |
-  #         if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
-  #           echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_PROD_DISTRIBUTION_ID }}" >> $GITHUB_ENV
-  #           echo "S3_PREFIX=fe-aviation-prod" >> $GITHUB_ENV
-  #         elif [[ "${{ github.ref }}" == "refs/heads/test" ]]; then
-  #           echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_TEST_DISTRIBUTION_ID }}" >> $GITHUB_ENV
-  #           echo "S3_PREFIX=fe-aviation-test" >> $GITHUB_ENV
-  #         elif [[ "${{ github.ref }}" == "refs/heads/demo" ]]; then
-  #           echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_DEMO_DISTRIBUTION_ID }}" >> $GITHUB_ENV
-  #           echo "S3_PREFIX=fe-aviation-demo" >> $GITHUB_ENV
-  #         else
-  #           echo "CF_DIST_ID=${{ secrets.CLOUDFRONT_DEV_DISTRIBUTION_ID }}" >> $GITHUB_ENV
-  #           echo "S3_PREFIX=fe-aviation-dev" >> $GITHUB_ENV
-  #         fi
-
-      - name: Build games-types
+      - name: Build game-types
+        working-directory: frontend/game-types/crash
         run: |
-          cd frontend/game-types/crash
-          pnpm run build:dev
+          if [[ "${{ github.base_ref }}" == "cicd" ]]; then
+            pnpm run build:dev
+          elif [[ "${{ github.base_ref }}" == "test" ]]; then
+            pnpm run build:uat
+          elif [[ "${{ github.base_ref }}" == "main" ]]; then
+            pnpm run build:prod
+          fi
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -60,8 +59,8 @@ jobs:
             path: frontend/game-types/crash/dist/
 
       - name: Build games
+        working-directory: frontend/games/crash/Aviation
         run: |
-          cd frontend/games/crash/Aviation
           pnpm run build
 
       - name: Upload artifact
@@ -71,8 +70,8 @@ jobs:
             path: frontend/games/crash/Aviation/dist
 
       - name: make aviation directory
+        working-directory: cd frontend/game-types/crash/dist/crash-game-engine/browser
         run: |
-          cd frontend/game-types/crash/dist/crash-game-engine/browser
           mkdir aviation
 
       - name: copy the build from games to games-type
@@ -85,34 +84,24 @@ jobs:
             name: final-artifact
             path: frontend/game-types/crash/dist/crash-game-engine
 
-      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
-      # - name: Configure AWS credentials
-      #   uses: aws-actions/configure-aws-credentials@v4
-      #   with:
-      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-      #     aws-region: ${{ secrets.AWS_REGION }}
+      - name: Deploy to S3
+        run: |
+          aws s3 sync frontend/game-types/crash/dist s3://${{ secrets.S3_BUCKET }} --delete --exact-timestamps
 
-      # - name: Upload game-types to S3
-      #   run: |
-      #     VERSION=v${{ github.run_number }}
-      #     aws s3 sync games/frontend/game-types/dist s3://$S3_BUCKET/$S3_PREFIX/game-types/$VERSION/ --delete --exact-timestamps
-      #     aws s3 sync games/frontend/game-types/dist s3://$S3_BUCKET/$S3_PREFIX/game-types/latest/ --delete --exact-timestamps
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id $CF_DIST_ID \
+            --paths "/*"
 
-      # - name: Upload game-engine to S3
-      #   run: |
-      #     VERSION=v${{ github.run_number }}
-      #     aws s3 sync games/frontend/game-engine/dist s3://$S3_BUCKET/$S3_PREFIX/game-engine/$VERSION/ --delete --exact-timestamps
-      #     aws s3 sync games/frontend/game-engine/dist s3://$S3_BUCKET/$S3_PREFIX/game-engine/latest/ --delete --exact-timestamps
-
-      # - name: Invalidate CloudFront cache
-      #   run: |
-      #     aws cloudfront create-invalidation \
-      #       --distribution-id $CF_DIST_ID \
-      #       --paths "/*"
-
-      # - name: ✅ Deployment Complete
-      #   run: echo "🎉 Deployed to $S3_PREFIX (version $VERSION)!"
+      - name: ✅ Deployment Complete
+        run: echo "Deployed to $S3_PREFIX (version $VERSION)!"
         
       
